@@ -1,0 +1,152 @@
+// --- COPY-PASTE the necessary code into your compiler ---
+
+
+//====================== Sprite and Background Palettes
+
+"Palettes":
+ARR {$0f,$19,$29,$3a,$0f,$00,$10,$20,$0f,$00,$10,$20,$0f,$00,$10,$20}; // Background
+ARR {$0f,$16,$10,$20,$0f,$00,$10,$20,$0f,$00,$16,$28,$0f,$00,$10,$20}; // Sprite
+
+
+//====================== Vertical Atribute Table
+
+"AtributeTable":
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+ARR {$55,$55,$55,$55,$55,$55,$55,$05};
+
+
+//====================== Horizontal Atribute Table
+
+"AtributeTable":
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$55,$55,$55,$55,$55,$55,$55,$55};
+ARR {$05,$05,$05,$05,$05,$05,$05,$05};
+
+
+//====================== Vertical Name Table
+
+"RawNameTable":
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$16,$ff,$ff,$ff,$ff,$ff};
+ARR {$0a,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$00,$ff,$0a,$ff,$ff,$ff,$ff,$ff,$17,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$1b,$ff,$1d,$ff,$ff,$ff,$ff,$ff,$0a,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$12,$ff,$11,$ff,$ff,$ff,$19,$ff,$1d,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$1d,$ff,$ff,$ff,$10,$ff,$12,$ff,$ff,$ff,$18,$ff,$18,$ff,$ff,$ff,$ff,$ff,$0e,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$0a,$ff,$ff,$ff,$12,$ff,$1c,$ff,$ff,$ff,$1b,$ff,$15,$ff,$02,$ff,$ff,$ff,$17,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$17,$ff,$ff,$ff,$17,$ff,$0f,$ff,$ff,$ff,$1d,$ff,$22,$ff,$00,$ff,$ff,$ff,$13,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$14,$ff,$ff,$ff,$0a,$ff,$1e,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$01,$ff,$ff,$ff,$18,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$1c,$ff,$ff,$ff,$15,$ff,$17,$ff,$ff,$ff,$0b,$ff,$15,$ff,$08,$ff,$ff,$ff,$22,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$25,$ff,$ff,$ff,$22,$ff,$0e,$ff,$ff,$ff,$ff,$ff,$26,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$0b,$ff,$0c,$ff,$ff,$ff,$24,$ff,$1b,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$22,$ff,$18,$ff,$ff,$ff,$ff,$ff,$17,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$24,$ff,$16,$ff,$ff,$ff,$ff,$ff,$0e,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$1b,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+
+
+//====================== Horizontal Name Table
+
+"RawNameTable":
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$1d,$0a,$17,$14,$1c,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$00,$1b,$12,$10,$12,$17,$0a,$15,$ff,$0b,$22,$24,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$16,$0a,$1d,$11,$12,$1c,$0f,$1e,$17,$25,$0c,$18,$16,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$19,$18,$1b,$1d,$ff,$0b,$22,$24,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$0a,$17,$0a,$1d,$18,$15,$22,$ff,$15,$0e,$1b,$17,$0e,$1b,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$02,$00,$01,$08,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$0e,$17,$13,$18,$22,$26,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+ARR {$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff};
+
+
+//====================== PackBits* Decompression Guide ( Independent of input data, Never Changes )
+
+//---- Header Meanings: ----
+// $00       : end of array ( can be added manually )
+// $01 - $7f : 3 to 129 repeated bytes 
+// $80 - $ff : 128 to 1 unique bytes
+
+
+//====================== Vertically Compressed PackBits* Name Table ( %21 of the original size )
+
+// Array Size: $0ce
+
+"NTarray":
+ARR {$7f,$ff,$7f,$ff,$16,$ff,$ff,$16,$03,$ff,$ff,$0a,$13,$ff,$fd,$00,$ff,$0a,$03,$ff,$ff,$17,$13,$ff,$fd,$1b,$ff,$1d,$03,$ff,$ff,$0a};
+ARR {$13,$ff,$fd,$12,$ff,$11,$01,$ff,$fd,$19,$ff,$1d,$0f,$ff,$ff,$1d,$01,$ff,$fd,$10,$ff,$12,$01,$ff,$fd,$18,$ff,$18,$03,$ff,$ff,$0e};
+ARR {$09,$ff,$ff,$0a,$01,$ff,$fd,$12,$ff,$1c,$01,$ff,$fb,$1b,$ff,$15,$ff,$02,$01,$ff,$ff,$17,$09,$ff,$ff,$17,$01,$ff,$fd,$17,$ff,$0f};
+ARR {$01,$ff,$fb,$1d,$ff,$22,$ff,$00,$01,$ff,$ff,$13,$09,$ff,$ff,$14,$01,$ff,$fd,$0a,$ff,$1e,$05,$ff,$ff,$01,$01,$ff,$ff,$18,$09,$ff};
+ARR {$ff,$1c,$01,$ff,$fd,$15,$ff,$17,$01,$ff,$fb,$0b,$ff,$15,$ff,$08,$01,$ff,$ff,$22,$0f,$ff,$ff,$25,$01,$ff,$fd,$22,$ff,$0e,$03,$ff};
+ARR {$ff,$26,$0d,$ff,$fd,$0b,$ff,$0c,$01,$ff,$fd,$24,$ff,$1b,$13,$ff,$fd,$22,$ff,$18,$03,$ff,$ff,$17,$13,$ff,$fd,$24,$ff,$16,$03,$ff};
+ARR {$ff,$0e,$1b,$ff,$ff,$1b,$7f,$ff,$7f,$ff,$14,$ff,$ff,$ff};
+
+
+//====================== Horizontally Compressed PackBits* Name Table ( %9 of the original size )
+
+// Array Size: $05b
+
+"NTarray":
+ARR {$7f,$ff,$4a,$ff,$fb,$1d,$0a,$17,$14,$1c,$76,$ff,$f4,$00,$1b,$12,$10,$12,$17,$0a,$15,$ff,$0b,$22,$24,$31,$ff,$f3,$16,$0a,$1d,$11};
+ARR {$12,$1c,$0f,$1e,$17,$25,$0c,$18,$16,$74,$ff,$f8,$19,$18,$1b,$1d,$ff,$0b,$22,$24,$33,$ff,$f2,$0a,$17,$0a,$1d,$18,$15,$22,$ff,$15};
+ARR {$0e,$1b,$17,$0e,$1b,$35,$ff,$fc,$02,$00,$01,$08,$79,$ff,$fa,$0e,$17,$13,$18,$22,$26,$7f,$ff,$29,$ff,$ff,$ff};
+
+
+//====================== Vertically Compressed PackBits* Atribute Table ( %50 of the original size )
+
+// Array Size: $020
+
+"ATarray":
+ARR {$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05,$05,$55,$ff,$05};
+
+
+//====================== Horizontally Compressed PackBits* Atribute Table ( %9 of the original size )
+
+// Array Size: $006
+
+"ATarray":
+ARR {$36,$55,$05,$05,$ff,$05};

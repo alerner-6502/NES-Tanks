@@ -1,0 +1,44 @@
+<NES>
+
+PRGSIZE: 1
+CHRSIZE: 8
+MAPPERID: 9
+MIRROR: 0
+RAMBANKS: 1
+USERAM: 0
+
+<PRG>
+
+32K
+Asm\Asm_32K[0].bin
+
+<CHR>
+
+8K
+Graphics\Game Graphics\Game Graphics_8K[0].chr
+
+8K
+Art\Home Screen (start)\TankArt_Start.bmp_8K[0].chr
+
+8K
+Art\Home Screen (start)\TankArt_Start.bmp_8K[1].chr
+
+8K
+Art\Selection Screen\TankArtSelect.bmp_8K[0].chr
+
+8K
+Art\Selection Screen\TankArtSelect.bmp_8K[1].chr
+
+8K
+Art\Color Screen\TankArColor.bmp_8K[0].chr
+
+8K
+Art\Color Screen\TankArColor.bmp_8K[1].chr
+
+4K
+Graphics\FrMap\MyMap3_Cloud.bmp_4K[1].chr
+
+4K
+Graphics\FrMap\MyMap3_Cloud.bmp_4K[1].chr
+
+<END>
